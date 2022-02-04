@@ -1,0 +1,64 @@
+*{
+    color: rgb(114, 95, 199);
+    font-size: 62px;
+    font-family: sans-serif;
+}
+*::selection{
+    background-color:inherit;
+}
+body{
+    background-color: rgb(6, 1, 22);
+}
+#displayer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    width: 153px;
+}
+.button{
+    font-size: 32px;
+    
+    height: fit-content;
+    cursor: pointer; 
+}
+.button:hover{
+    color: blanchedalmond;
+}
+.timer{
+    cursor: default;
+    margin: 0;
+}
+.buttonArea{
+    display: flex;
+}
+.launchButton{
+    width: 175px;
+    text-align: center;
+    color: rgb(114, 95, 199);
+    font-size: 30px;
+    margin: 25px;
+    font-family: sans-serif;
+    border: solid 3px rgb(114, 95, 199);
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.1s;
+
+}
+.launchButton:hover{
+    transform: scale(1.008);
+}
+
+.invisible {
+    visibility: hidden;
+}
