@@ -1,64 +1,124 @@
-*{
-    color: rgb(114, 95, 199);
+@font-face {
+    font-family: "consolas";
+    src: url("/font/consolas.ttf") format("ttf"),
+}
+
+* {
+    color: #ff00c1;
     font-size: 62px;
-    font-family: sans-serif;
+    font-family: 'consolas', sans-serif;
 }
-*::selection{
-    background-color:inherit;
+
+*::selection {
+    background-color: inherit;
 }
-body{
-    background-color: rgb(6, 1, 22);
+
+body {
+    background-color: #0d0221;
+    overflow: hidden;
 }
-#displayer{
+
+#displayer {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
 }
-.buttons{
+
+.buttons {
     display: flex;
     justify-content: space-around;
     margin: 0;
     width: 153px;
 }
-.button{
-    font-size: 32px;
-    
+
+.button {
+    font-size: 1rem;
     height: fit-content;
-    cursor: pointer; 
+    cursor: pointer;
+    padding-right: 0.1rem;
 }
-.button:hover{
-    color: blanchedalmond;
-}
-.timer{
+
+.timer {
+    display: flex;
     cursor: default;
     margin: 0;
+    font-size: 1rem;
 }
-.buttonArea{
+
+.timer__time {
+    font-size: 1rem;
+    padding-right: 0.1rem;
+}
+
+.timer,
+.button {
+    color: #ff00c1;
+    text-shadow: 0 0 5px #ff00c1, 0 0 10px #ff00c1, 0 0 42px #ff00c1, 0 0 82px #ff00c1, 0 0 92px #ff00c1, 0 0 102px #ff00c1;
+}
+
+.buttonArea {
     display: flex;
 }
-.launchButton{
-    width: 175px;
-    text-align: center;
-    color: rgb(114, 95, 199);
-    font-size: 30px;
-    margin: 25px;
-    font-family: sans-serif;
-    border: solid 3px rgb(114, 95, 199);
-    background-color: rgb(255, 255, 255);
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.1s;
 
-}
-.launchButton:hover{
-    transform: scale(1.008);
+.launchButton {
+    text-align: center;
+    color: #00b8ff;
+    font-size: 30px;
+    margin: 2rem;
+    font-family: 'consolas', sans-serif;
+    font-weight: 600;
+    border: solid 3px #00b8ff;
+    background-color: rgb(255, 255, 255);
+    background: linear-gradient(172deg, #8c1eff, #f222ff, #ff2975, #ff901f, #ffd319, #F49653);
+    padding: .2rem 1rem;
+    border-radius: .4rem;
+    cursor: pointer;
+    box-shadow: 0 0 5px #00b8ff, 0 0 10px #00b8ff, 0 0 20px #00b8ff;
 }
 
 .invisible {
     visibility: hidden;
+}
+
+
+/* Hover */
+
+.button:hover {
+    color: blanchedalmond;
+}
+
+.launchButton:hover {
+    box-shadow: 0 0 5px #00b8ff, 0 0 10px #00b8ff, 0 0 42px #00b8ff;
+}
+
+
+/* Sun*/
+
+#sun {
+    width: 300px;
+    height: 300px;
+}
+
+
+/* Grid */
+
+.grid-container {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.grid {
+    z-index: -2000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0px, rgba(54, 226, 248, 0.5) 0%, rgba(54, 226, 248, 0.5) 3px, rgba(0, 0, 0, 0) 0px), linear-gradient(90deg, rgba(0, 0, 0, 0) 0px, rgba(54, 226, 248, 0.5) 0%, rgba(54, 226, 248, 0.5) 3px, rgba(0, 0, 0, 0) 0px);
+    background-size: 2em 2em, 2em 4em;
+    background-color: black;
+    height: 20em;
+    perspective: 1000px;
+    transform: perspective(500px) scale(2) rotateX(80deg);
+    position: absolute;
+    width: 100%;
+    top: -10%;
 }
