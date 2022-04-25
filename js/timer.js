@@ -279,7 +279,7 @@ const utils = {
         const audio = new Audio()
 
         //Ajout d'une source à notre constante audio
-        audio.src = "son/CriWilhelm.mp3"
+        audio.src = "song/CriWilhelm.mp3"
 
         //La fonction audioPlaying est jouée.
         this.audioPlaying(audio)
