@@ -1,13 +1,16 @@
-### Un petit projet simple en JS vanilla qui m'a permis de m'exercer avec ce langage:
+### To practice JS vanilla, I made this timer app
 
-**Descriptif simple:**
-- Minuteur paramétrable  
-- Sonnerie pour indiquer la fin de la minuterie  
-- Possibilité de mettre le minuteur en pause 
-- Design RetroWave
-- Responsive design (wip)
+**Quick description:**
+- code organization with js modules 
+- configurable timer  
+- ability to pause
+- RetroWave design
+- grid style: https://codepen.io/hugo/pen/eYZrOW 
+- sun style: https://codepen.io/Sorskoot/pen/qBWpRea 
+- no responsive design (wip)
+- Wilhelm's cry to indicate the end of the timer ^^
 
-![Screenshot](screenshot.png)
+![Screenshot](img/screenshot.png)
 
 
 

@@ -1,5 +1,6 @@
 const sun = {
-    displaySun: () => {
+
+    displaySun: function() {
         let s = document.createElement("canvas");
         s.width = s.height = 512;
         let sun = s.getContext("2d");
@@ -65,7 +66,5 @@ const sun = {
         ctx.shadowBlur = 50;
         ctx.drawImage(s, 0, 0);
 
-    }
+    },
 }
-
-sun.displaySun();
