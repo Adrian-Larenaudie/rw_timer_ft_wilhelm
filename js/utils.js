@@ -56,47 +56,52 @@ const utils = {
                 //On affiche la page running puis la fonction timer est lancée:
                 //Elle prend les valeurs que l'utilisateur à paramétrées,
                 //ces valeurs sont stockées dans les variable a, b, c et d 
-                page.running()
-                timer.run(page.a, page.b, page.c, page.d)
+                page.running();
+                timer.run(page.a, page.b, page.c, page.d);
             }
         })
     },
 
-    //Cette fonction permet à l'utilisateur de faire une pause lorsque la minuterie est lancée
-    //sans perdre le temps qu'il reste à écouler.
-    handlePauseButton: function() {
-        //Ajout d'un évènement click sur le bouton ayant l'id pause.
-        pause.addEventListener("click", (event) => {
-            //Le bouton pause a deux mode soit il affiche pause soit il affiche reprendre:
-            //si il affiche pause:
-            if (event.target.textContent == "Stop") {
-                //On concidère que clicked est vrai
-                clicked = true
-                    //et son affichage devient reprendre
-                event.target.textContent = "Continue"
-            //sinon si il affiche reprendre:
-            } else if (event.target.textContent == "Continue") {
-                //On concidère que clicked est faux
-                clicked = false
-                    //et son affichage devient pause.
-                event.target.textContent = "Stop"
-                    //On rejout la fonction timer() avec les valeurs qu'on a stocké lors de la pause.
-                timer.run(page.i, page.f, page.g, page.h)
-            }
-        })
+    pauseButton: function() {
+        pause.addEventListener("click", utils.handlePauseButton);
+    },
+
+    handlePauseButton: function(event) {
+        console.log(event);
+        pause.style.cursor = 'default';
+        if (event.target.textContent == "Pause") {
+            //On concidère que clicked est vrai
+            clicked = true;
+            //et son affichage devient reprendre
+            event.target.textContent = "Continue";
+        //sinon si il affiche reprendre:
+        } else if (event.target.textContent == "Continue") {
+            //On concidère que clicked est faux
+            clicked = false;
+            //et son affichage devient pause.
+            event.target.textContent = "Pause";
+            //On rejout la fonction timer() avec les valeurs qu'on a stocké lors de la pause.
+            timer.run(page.i, page.f, page.g, page.h);
+        }
+        utils.removePauseButtonEvent();
+    },
+
+    removePauseButtonEvent: function() {
+        pause.removeEventListener('click', utils.handlePauseButton);
+        utils.pauseButton();
     },
 
     handleResetButton: function() {
         reset.addEventListener("click", () => {
-            clicked = true
-            page.a = 0, page.b = 0, page.c = 0, page.d = 0
-            page.lobby()
+            clicked = true;
+            page.a = 0, page.b = 0, page.c = 0, page.d = 0;
+            page.lobby();
         })
     },
 
     handleStopButton: function() {
         stopWilhelm.addEventListener("click", () => {
-            page.lobby()
+            page.lobby();
         })
     },
 }

@@ -16,6 +16,8 @@ const page = {
 
     //lobby method to display the main content
     lobby: function() {
+        //display of the footer grid
+        grid.display();
         page.displayer.innerHTML = `
         <canvas id="sun"></canvas>
         <div class="buttons">
@@ -58,13 +60,13 @@ const page = {
         <canvas id="sun"></canvas>
         <div class="timer">${this.a}${this.b}:${this.c}${this.d}</div>
         <div class="buttonArea">
-            <div id="pause" class="launchButton">Stop</div>
+            <div id="pause" class="launchButton">Pause</div>
             <div id="reset" class="launchButton">Reset</div>
         </div>
         `
         //add click event on reset and stop buttons and manage them
-        utils.handleResetButton()
-        utils.handlePauseButton()
+        utils.handleResetButton();
+        utils.pauseButton();
         //display of the sun
         sun.displaySun();
     },
@@ -79,7 +81,7 @@ const page = {
         </div>
         `
         //add a click event on stop button and manage it
-        utils.handleStopButton()
+        utils.handleStopButton();
         sun.displaySun();
     },
 }

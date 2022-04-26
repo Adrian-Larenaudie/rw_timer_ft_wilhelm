@@ -44,7 +44,7 @@ const timer = {
             //Lorsque toutes les valeurs sont égale à zéro on concidère que la minuterie est terminée
             } else if (a == 0 && b == 0 && c == 0 && d == 0) {
                 //La fonction wilhelm est jouée
-                song.wilhelm(true);
+                song.wilhelm();
                 //L'affichage change, la fonction end() de l'objet page permet cela.
                 page.end();
             }

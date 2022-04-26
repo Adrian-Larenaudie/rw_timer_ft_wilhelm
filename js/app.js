@@ -1,6 +1,8 @@
 
 const app = {
     init: function() {
+        //display of the footer grid
+        grid.display();
         console.log('Module App chargé!');
         page.lobby();
     },   
