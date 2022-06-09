@@ -60,7 +60,7 @@ body {
 .timer,
 .button {
     color: #ff00c1;
-    text-shadow: 0 0 5px #ff00c1, 0 0 10px #ff00c1, 0 0 42px #ff00c1, 0 0 82px #ff00c1, 0 0 92px #ff00c1, 0 0 102px #ff00c1;
+    text-shadow: 0 0 5px #ff00c1, 0 0 10px #ff00c1, 0 0 42px #ff00c1, 0 0 92px #ff00c1;
 }
 
 .buttonArea {
