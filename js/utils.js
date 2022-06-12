@@ -23,7 +23,7 @@ const utils = {
                     if (page.b < 9) { page.b++ } else if (page.b == 9) { page.b = 0 }
                     break
                 case "top3":
-                    if (page.c < 6) { page.c++ } else if (page.c == 6) { page.c = 0 }
+                    if (page.c < 5) { page.c++ } else if (page.c == 5) { page.c = 0 }
                     break
                 case "top4":
                     if (page.d < 9) { page.d++ } else if (page.d == 9) { page.d = 0 }
@@ -35,7 +35,7 @@ const utils = {
                     if (page.b > 0) { page.b-- } else if (page.b == 0) { page.b = 9 }
                     break
                 case "bot3":
-                    if (page.c > 0) { page.c-- } else if (page.c == 0) { page.c = 6 }
+                    if (page.c > 0) { page.c-- } else if (page.c == 0) { page.c = 5 }
                     break
                 case "bot4":
                     if (page.d > 0) { page.d-- } else if (page.d == 0) { page.d = 9 }
