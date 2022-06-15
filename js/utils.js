@@ -100,7 +100,7 @@ const utils = {
     },
 
     handleStopButton: function() {
-        stopWilhelm.addEventListener("click", () => {
+        stopPlaying.addEventListener("click", () => {
             page.lobby();
         })
     },

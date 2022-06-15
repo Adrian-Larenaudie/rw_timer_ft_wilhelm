@@ -51,6 +51,7 @@ const page = {
         utils.handleStartButton();
         //display of the sun
         sun.displaySun();
+        song.easterEgg();
     },
 
     //running method is the current display when timer is running
@@ -69,6 +70,7 @@ const page = {
         utils.pauseButton();
         //display of the sun
         sun.displaySun();
+        song.easterEgg();
     },
 
     //end method is the current display when timer is over
@@ -77,11 +79,12 @@ const page = {
         <canvas id="sun"></canvas>
         <div class="timer">00:00</div>
         <div class="buttonArea">
-            <div id="stopWilhelm" class="launchButton">Stop</div>
+            <div id="stopPlaying" class="launchButton">Stop</div>
         </div>
         `
         //add a click event on stop button and manage it
         utils.handleStopButton();
         sun.displaySun();
+        song.easterEgg();
     },
 }
