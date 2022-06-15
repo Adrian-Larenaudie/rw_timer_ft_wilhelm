@@ -79,7 +79,7 @@ const page = {
         <canvas id="sun"></canvas>
         <div class="timer">00:00</div>
         <div class="buttonArea">
-            <div id="stopPlaying" class="launchButton">Stop</div>
+            <div id="stopPlaying" class="launchButton stopButton">Stop</div>
         </div>
         `
         //add a click event on stop button and manage it

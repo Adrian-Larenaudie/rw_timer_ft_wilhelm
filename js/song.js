@@ -34,7 +34,7 @@ const song = {
                 console.log("stopSong");
             }
             //Le son est paramètré pour être joué toutes les secondes.               
-        }, 1000)
+        }, 100)
     },
 
     /* esater egg façon discord ;) */

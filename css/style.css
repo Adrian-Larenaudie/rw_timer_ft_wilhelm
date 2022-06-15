@@ -183,3 +183,24 @@ body {
         margin: .3rem 1rem;
     }
 }
+
+.stopButton {
+    animation-name: scaling;
+    animation-duration: .8s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scaling {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
